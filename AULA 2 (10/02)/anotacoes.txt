@@ -1,0 +1,3 @@
+sobrecarga/overloading -> um método de mesmo nome com quantidade de atributos diferentes
+"this" -> demonstra que o nome após o ponto corresponde ao atributo da classe
+
