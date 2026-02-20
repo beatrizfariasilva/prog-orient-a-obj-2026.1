@@ -28,5 +28,4 @@ public class Quadrado{
             System.out.println();
         }         
     }
-
 };
