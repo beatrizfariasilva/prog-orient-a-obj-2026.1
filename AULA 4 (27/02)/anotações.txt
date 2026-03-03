@@ -1,0 +1,2 @@
+- conceito de associação: classe dentro de classe
+- public String toString(): função pronta a colocar dentro da classe que permite a gente usar sout(nomedoobjeto) sem dar ruim
