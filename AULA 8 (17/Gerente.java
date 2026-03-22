@@ -14,8 +14,16 @@ public class Gerente extends Funcionario {
         return super.getNome();
     }
 
+    public void setNome(String nome){
+        super.setNome(nome);
+    }
+
     public double getSalario(){
         return super.getSalario();
+    }
+
+    public void setSalario(double salario){
+        super.setSalario(salario);
     }
 
     public String getDepartamento(){

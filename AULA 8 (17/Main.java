@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static Scanner input = new Scanner (System.in);
@@ -14,22 +15,23 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Funcionario[] funcionarios = new Funcionario[50];
-        int tam=0;
+        //Funcionario[] funcionarios = new Funcionario[50];
+        ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
 
-        funcionarios[tam]=new Desenvolvedor("Andressa", 2500.67, "Python");
-        tam++;
-        funcionarios[tam]=new Desenvolvedor("Beatriz", 2500.67, "Java");
-        tam++;
-        funcionarios[tam]=new Gerente("Daniel", 10000.67, "Computação");
-        tam++;
-        funcionarios[tam]=new Funcionario("Ricardo", 3000.67);
-        tam++;
+        Funcionario d1=new Desenvolvedor("Andressa", 2500.67, "Python");
+        Funcionario d2=new Desenvolvedor("Beatriz", 2500.67, "Java");
+        Funcionario g=new Gerente("Daniel", 10000.67, "Computação");
+        Funcionario f=new Funcionario("Ricardo", 3000.67);
+
+        funcionarios.add(d1);
+        funcionarios.add(d2);
+        funcionarios.add(g);
+        funcionarios.add(f);
         
-        for (int i=0; i<tam; i++){
-            System.out.println("Nome do funcionario: "+ funcionarios[i].getNome());
-            System.out.println("Salário: "+ funcionarios[i].getSalario());
-            System.out.println("Bônus: "+exibirBonus(funcionarios[i]));
+        for (Funcionario individuo : funcionarios){ //pode ser tb (for i=0; i<funcionarios.size(); i++)
+            System.out.println("Nome do funcionario: "+ individuo.getNome());
+            System.out.println("Salário: "+ individuo.getSalario());
+            System.out.println("Bônus: "+exibirBonus(individuo));
             System.out.println();
         }
 
